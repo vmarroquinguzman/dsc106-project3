@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>California on Fire | DSC 106</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- D3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+    <!-- JavaScript -->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            CALIFORNIA <span>ON FIRE</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#wildfires">Wildfires</a>
+            <a href="#aerosols">Air Quality</a>
+            <a href="#temperature">Temperature</a>
+            <a href="#methodology">Methodology</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                DSC 106 · DATA VISUALIZATION PROJECT
+            </p>
+
+            <h1>
+                California <br>
+                <span>on Fire.</span>
+            </h1>
+
+            <p class="hero-description">
+                Exploring over two decades of California wildfire activity
+                and its relationship with atmospheric aerosols and
+                land surface temperature.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#overview" class="btn-primary">
+                    Explore the Data ↓
+                </a>
+
+                <a href="#methodology" class="btn-secondary">
+                    About the Data
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-stat">
+
+            <p class="stat-label">STUDY PERIOD</p>
+
+            <h2>2003 — 2025</h2>
+
+            <p>
+                23 years of satellite observations
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="section">
+
+        <div class="section-header">
+
+            <p class="section-number">01 / INTRODUCTION</p>
+
+            <h2>Understanding California's Wildfires</h2>
+
+            <p class="section-description">
+                Wildfires are an important environmental challenge
+                in California. By examining historical burned area,
+                aerosol optical depth, and land surface temperature,
+                we aim to better understand patterns in wildfire
+                activity and how they relate to environmental conditions.
+            </p>
+
+        </div>
+
+
+        <div class="question-box">
+
+            <p class="question-label">OUR RESEARCH QUESTION</p>
+
+            <h3>
+                How have California's wildfire patterns changed
+                from 2003 to 2025, and how are they associated
+                with aerosol loading and land surface temperature?
+            </h3>
+
+        </div>
+
+
+        <div class="overview-grid">
+
+            <div class="overview-card">
+
+                <span class="card-number">01</span>
+
+                <h3>Wildfire Activity</h3>
+
+                <p>
+                    Investigating changes in burned area
+                    and seasonal wildfire patterns.
+                </p>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <span class="card-number">02</span>
+
+                <h3>Aerosol Loading</h3>
+
+                <p>
+                    Exploring atmospheric aerosol levels
+                    and their relationship with wildfire activity.
+                </p>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <span class="card-number">03</span>
+
+                <h3>Surface Temperature</h3>
+
+                <p>
+                    Examining how land surface temperature
+                    is associated with burned area.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GRAPH 1 -->
+    <section id="wildfires" class="section section-alt">
+
+        <div class="section-header">
+
+            <p class="section-number">02 / WILDFIRE TRENDS</p>
+
+            <h2>Two Decades of Fire</h2>
+
+            <p class="section-description">
+                How has the total area burned by wildfires
+                in California changed between 2003 and 2025?
+            </p>
+
+        </div>
+
+
+        <div class="chart-container">
+
+            <div class="chart-header">
+
+                <div>
+                    <h3>Annual California Burned Area</h3>
+                    <p>Total burned area by year, 2003–2025</p>
+                </div>
+
+                <span class="chart-tag">TIME SERIES</span>
+
+            </div>
+
+            <div id="burned-area-chart" class="chart">
+                <p class="placeholder-text">
+                    Annual burned area visualization coming soon
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- GRAPH 2 -->
+        <div class="chart-container">
+
+            <div class="chart-header">
+
+                <div>
+                    <h3>When Does California Burn?</h3>
+                    <p>Monthly wildfire activity across years</p>
+                </div>
+
+                <span class="chart-tag">SEASONALITY</span>
+
+            </div>
+
+            <div id="seasonality-chart" class="chart">
+                <p class="placeholder-text">
+                    Monthly wildfire heatmap coming soon
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GRAPH 3 -->
+    <section id="aerosols" class="section">
+
+        <div class="section-header">
+
+            <p class="section-number">03 / ATMOSPHERIC CONDITIONS</p>
+
+            <h2>What's in the Air?</h2>
+
+            <p class="section-description">
+                Aerosol Optical Depth (AOD) measures how much
+                atmospheric particles reduce the transmission
+                of light. Higher AOD generally indicates
+                greater aerosol loading.
+            </p>
+
+        </div>
+
+
+        <div class="chart-container">
+
+            <div class="chart-header">
+
+                <div>
+                    <h3>Annual Average Aerosol Optical Depth</h3>
+                    <p>Atmospheric aerosol loading, 2003–2025</p>
+                </div>
+
+                <span class="chart-tag">TIME SERIES</span>
+
+            </div>
+
+            <div id="aod-chart" class="chart">
+                <p class="placeholder-text">
+                    Aerosol optical depth visualization coming soon
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- GRAPH 4 -->
+        <div class="chart-container">
+
+            <div class="chart-header">
+
+                <div>
+                    <h3>Do More Wildfires Mean More Aerosols?</h3>
+                    <p>Burned area compared with aerosol optical depth</p>
+                </div>
+
+                <span class="chart-tag">RELATIONSHIP</span>
+
+            </div>
+
+            <div id="fire-aod-chart" class="chart">
+                <p class="placeholder-text">
+                    Wildfire activity vs. AOD scatterplot coming soon
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GRAPH 5 -->
+    <section id="temperature" class="section section-alt">
+
+        <div class="section-header">
+
+            <p class="section-number">04 / LAND SURFACE TEMPERATURE</p>
+
+            <h2>Does Heat Matter?</h2>
+
+            <p class="section-description">
+                Exploring whether higher land surface temperatures
+                are associated with greater wildfire activity
+                across California.
+            </p>
+
+        </div>
+
+
+        <div class="chart-container">
+
+            <div class="chart-header">
+
+                <div>
+                    <h3>Temperature vs. Burned Area</h3>
+                    <p>Monthly land surface temperature and burned area</p>
+                </div>
+
+                <span class="chart-tag">RELATIONSHIP</span>
+
+            </div>
+
+            <div id="temperature-chart" class="chart">
+                <p class="placeholder-text">
+                    Temperature vs. burned area scatterplot coming soon
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- METHODOLOGY -->
+    <section id="methodology" class="section">
+
+        <div class="section-header">
+
+            <p class="section-number">05 / METHODOLOGY</p>
+
+            <h2>Behind the Data</h2>
+
+            <p class="section-description">
+                Our project uses NASA MODIS satellite observations
+                to investigate California wildfire activity and
+                associated environmental conditions.
+            </p>
+
+        </div>
+
+
+        <div class="method-grid">
+
+            <div class="method-card">
+
+                <h3>Data Source</h3>
+
+                <p>
+                    NASA MODIS satellite data
+                    from the Terra and Aqua missions.
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3>Study Region</h3>
+
+                <p>
+                    California, United States.
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3>Time Period</h3>
+
+                <p>
+                    January 2003 – December 2025.
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3>Measurements</h3>
+
+                <p>
+                    Burned area, aerosol optical depth,
+                    and land surface temperature.
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="method-note">
+            Note: The visualizations examine associations rather than
+            establishing causal relationships. Aerosol optical depth
+            includes aerosols from sources other than wildfire smoke.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>California on Fire</h3>
+                <p>DSC 106 · UC San Diego</p>
+            </div>
+
+            <div>
+                <p>Data Source: NASA MODIS</p>
+                <p>2003–2025</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
