@@ -1,25 +1,20 @@
-/* =========================================
-   GLOBAL STYLES
-========================================= */
+/* California fire seasonality dashboard | DSC 106 Project 3 */
 
 :root {
     --background: #FAF7F2;
     --background-alt: #F1EBE2;
-
     --text: #252525;
-    --text-light: #666666;
-
+    --muted: #686560;
     --accent: #C65D3B;
     --accent-dark: #9E4328;
-
     --border: #DDD6CD;
-
-    --white: #FFFFFF;
+    --white: #fff;
+    --n: #A65032;
+    --c: #476B83;
+    --s: #849064;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -28,10 +23,11 @@ html {
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
+    margin: 0;
     background: var(--background);
+    font-family: "DM Sans",sans-serif;
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.65;
 }
 
 a {
@@ -39,193 +35,95 @@ a {
     color: inherit;
 }
 
-h1, h2, h3 {
+h1,h2 {
+    font-family: "Playfair Display",serif;
     line-height: 1.2;
 }
 
-h1, h2 {
-    font-family: 'Playfair Display', serif;
+h1,h2,h3,p {
+    margin-top: 0;
 }
 
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
 .navbar {
+    padding: 20px max(5%,calc((100vw - 1120px)/2));
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 24px 8%;
-
-    background: var(--background);
-
+    gap: 20px;
     border-bottom: 1px solid var(--border);
-
+    background: var(--background);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
-.logo span {
+.logo span,.eyebrow {
     color: var(--accent);
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
+    gap: 24px;
     font-size: 13px;
     font-weight: 600;
-    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: var(--accent);
 }
 
-
-/* =========================================
-   HERO
-========================================= */
-
 .hero {
-    min-height: 85vh;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 100px 8%;
-
-    gap: 60px;
-
-    background:
-        radial-gradient(
-            circle at 85% 30%,
-            rgba(198, 93, 59, 0.12),
-            transparent 40%
-        ),
-        var(--background);
-}
-
-.hero-content {
-    max-width: 700px;
+    padding: 94px max(5%,calc((100vw - 1120px)/2)) 105px;
 }
 
 .eyebrow {
     font-size: 12px;
+    letter-spacing: 2px;
     font-weight: 700;
-
-    letter-spacing: 3px;
-    color: var(--accent);
-
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(60px, 7vw, 110px);
+    font-size: clamp(44px,6vw,82px);
     font-weight: 600;
-    line-height: 1.05;
-
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 }
 
-.hero h1 span {
+.hero em {
+    font-style: normal;
     color: var(--accent);
 }
 
 .hero-description {
-    max-width: 550px;
-
-    font-size: 18px;
-    color: var(--text-light);
-
-    margin-bottom: 35px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn-primary,
-.btn-secondary {
-    display: inline-block;
-
-    padding: 14px 25px;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    border-radius: 4px;
-
-    transition: all 0.3s ease;
+    max-width: 720px;
+    font-size: 19px;
+    color: var(--muted);
+    margin-bottom: 30px;
 }
 
 .btn-primary {
     background: var(--accent);
     color: white;
+    padding: 13px 21px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .btn-primary:hover {
     background: var(--accent-dark);
-    transform: translateY(-2px);
 }
-
-.btn-secondary {
-    border: 1px solid var(--border);
-}
-
-.btn-secondary:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-.hero-stat {
-    min-width: 250px;
-
-    padding: 35px;
-
-    border-left: 2px solid var(--accent);
-}
-
-.stat-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-
-    color: var(--accent);
-}
-
-.hero-stat h2 {
-    font-size: 38px;
-    margin: 12px 0;
-}
-
-.hero-stat p:last-child {
-    font-size: 13px;
-    color: var(--text-light);
-}
-
-
-/* =========================================
-   SECTIONS
-========================================= */
 
 .section {
-    padding: 110px 8%;
-    scroll-margin-top: 90px;
+    padding: 80px max(5%,calc((100vw - 1120px)/2));
+    scroll-margin-top: 65px;
 }
 
 .section-alt {
@@ -234,302 +132,233 @@ h1, h2 {
 
 .section-header {
     max-width: 850px;
-    margin-bottom: 55px;
+    margin-bottom: 32px;
 }
 
-.section-number {
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-    color: var(--accent);
-
-    margin-bottom: 15px;
+.section h2 {
+    font-size: clamp(32px,4vw,46px);
+    margin-bottom: 17px;
 }
 
-.section-header h2 {
-    font-size: clamp(36px, 4vw, 55px);
-    margin-bottom: 20px;
+.section p {
+    max-width: 900px;
 }
 
-.section-description {
-    font-size: 17px;
-    color: var(--text-light);
-    line-height: 1.9;
-}
-
-
-/* =========================================
-   RESEARCH QUESTION
-========================================= */
-
-.question-box {
-    background: var(--text);
-    color: white;
-
-    padding: 55px;
-
-    margin-bottom: 45px;
-
-    border-left: 5px solid var(--accent);
-}
-
-.question-label {
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-    color: #E9A58B;
-
-    margin-bottom: 20px;
-}
-
-.question-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 3vw, 35px);
-    font-weight: 500;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================
-   OVERVIEW CARDS
-========================================= */
-
-.overview-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.overview-card {
+.chart-card {
     background: white;
-
-    padding: 35px;
-
     border: 1px solid var(--border);
-
-    transition: transform 0.3s ease;
-}
-
-.overview-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-number {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--accent);
-}
-
-.overview-card h3 {
-    font-size: 20px;
-    margin: 20px 0 12px;
-}
-
-.overview-card p {
-    font-size: 14px;
-    color: var(--text-light);
-}
-
-
-/* =========================================
-   CHART CONTAINERS
-========================================= */
-
-.chart-container {
-    background: white;
-
-    border: 1px solid var(--border);
-
-    padding: 35px;
-
-    margin-bottom: 35px;
-
+    padding: 26px 30px;
     border-radius: 6px;
+    margin: 20px 0 28px;
 }
 
-.chart-header {
+.card-heading {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-
-    gap: 20px;
-
-    padding-bottom: 25px;
-
-    border-bottom: 1px solid var(--border);
-}
-
-.chart-header h3 {
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.chart-header p {
-    font-size: 13px;
-    color: var(--text-light);
-}
-
-.chart-tag {
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: var(--accent);
-    background: #FBECE5;
-
-    padding: 8px 12px;
-
-    border-radius: 3px;
-
-    white-space: nowrap;
-}
-
-.chart {
-    width: 100%;
-    min-height: 430px;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
-
-    margin-top: 25px;
+    gap: 16px;
 }
 
-.placeholder-text {
-    color: #999999;
-    font-size: 14px;
-
-    text-align: center;
-
-    border: 2px dashed var(--border);
-
-    width: 100%;
-    padding: 150px 20px;
+.card-heading h3 {
+    font-size: 20px;
+    margin: 0 0 4px;
 }
 
-
-/* =========================================
-   METHODOLOGY
-========================================= */
-
-.method-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.method-card {
-    padding: 30px;
-
-    background: white;
-
-    border: 1px solid var(--border);
-}
-
-.method-card h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.method-card p {
-    font-size: 14px;
-    color: var(--text-light);
-}
-
-.method-note {
-    margin-top: 30px;
-
+.card-heading p {
     font-size: 13px;
-    color: var(--text-light);
-
-    max-width: 800px;
+    color: var(--muted);
+    margin-bottom: 0;
 }
 
+.controls {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 14px;
+}
 
-/* =========================================
-   FOOTER
-========================================= */
+button {
+    font: inherit;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--text);
+    border-radius: 3px;
+    padding: 7px 12px;
+}
+
+button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.hint {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 12px 0 0;
+}
+
+.legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 26px 0 10px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend i {
+    display: inline-block;
+    width: 24px;
+    height: 0;
+    border-top: 3px solid #444;
+}
+
+.legend .key-dashed {
+    border-top: 2px dashed #9C9A97;
+}
+
+.region-panel {
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+    margin-top: 13px;
+}
+
+.region-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2px;
+}
+
+.region-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.region-header h4 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.plot {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.plot text {
+    font-family: "DM Sans",sans-serif;
+    font-size: 11px;
+    fill: #686560;
+}
+
+.plot .grid line {
+    stroke: #EAE6E0;
+    stroke-dasharray: 2 3;
+}
+
+.plot .domain {
+    stroke: #B9B2A9;
+}
+
+.plot .tick line {
+    stroke: #D7D0C6;
+}
+
+.brush .selection {
+    fill: var(--accent);
+    fill-opacity: .16;
+    stroke: var(--accent);
+    stroke-width: 1.5;
+}
+
+.brush .handle {
+    fill: var(--accent);
+}
+
+.hover-summary {
+    font-size: 13px;
+    min-height: 25px;
+    color: var(--muted);
+    margin-top: 14px;
+}
+
+.status {
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.section>p {
+    color: #47433E;
+}
+
+.to-complete {
+    background: white;
+    border-left: 3px solid var(--accent);
+    padding: 15px;
+}
+
+.section h3 {
+    margin-top: 22px;
+}
 
 footer {
-    background: var(--text);
-    color: white;
-
-    padding: 50px 8%;
-}
-
-.footer-content {
+    background: #252525;
+    color: #ddd;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    gap: 12px;
+    padding: 28px max(5%,calc((100vw - 1120px)/2));
+    font-size: 12px;
 }
 
-.footer-content h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.footer-content p {
-    font-size: 13px;
-    color: #BBBBBB;
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 900px) {
-
+@media (max-width:720px) {
     .navbar {
+        align-items: flex-start;
         flex-direction: column;
-        gap: 20px;
     }
 
     .nav-links {
+        gap: 13px;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
     }
 
     .hero {
-        flex-direction: column;
-        align-items: flex-start;
-
-        padding-top: 70px;
-    }
-
-    .hero-stat {
-        width: 100%;
-    }
-
-    .overview-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .method-grid {
-        grid-template-columns: 1fr;
+        padding-top: 60px;
+        padding-bottom: 65px;
     }
 
     .section {
-        padding: 75px 6%;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
-    .chart-header {
-        flex-direction: column;
+    .chart-card {
+        padding: 20px 12px;
     }
 
-    .question-box {
-        padding: 30px;
-    }
-
-    .footer-content {
-        flex-direction: column;
+    .card-heading {
         align-items: flex-start;
+        flex-direction: column;
     }
 
+    .controls {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
 }
