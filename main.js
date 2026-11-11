@@ -1,5 +1,4 @@
 // DSC 106 Project 3
-// Interactive visualizations using D3.js
 
 const DATA_URL = 'data/processed/regional_monthly_fires.csv';
 const REGIONS = ['Northern California', 'Central California', 'Southern California'];
@@ -12,8 +11,8 @@ async function start() {
     const status = d3.select('#data-status');
     try {
         const rows = await d3.csv(DATA_URL, d => ({
-            region: d.region.trim(), year: +d.year, month: +d.month,
-            detections: +d.detections, percent: +d.percent
+        region: d.region.trim(), year: +d.year, month: +d.month,
+        detections: +d.detections, percent: +d.percent
         }));
         validate(rows);
         status.text('');
@@ -22,7 +21,7 @@ async function start() {
         console.error(error);
         status.text(`Could not load the visualization: ${error.message}. Ensure ${DATA_URL} exists and run the site through a local web server or GitHub Pages.`);
     }
-}
+    }
 
 function validate(rows) {
     if (rows.length !== 828) throw new Error(`Expected 828 monthly records, found ${rows.length}`);
@@ -43,10 +42,9 @@ function validate(rows) {
         throw new Error(`Missing months or invalid percentages: ${region}, ${year}`);
         }
     }
-}
+    }
 
 function buildDashboard(data) {
-  // The values are already normalized within each region-year in Python.
   // Averaging percentages assigns the same weight to each selected year.
     const avg = (region, lo, hi) => d3.range(1, 13).map(month => ({
         month,
@@ -74,6 +72,7 @@ function buildDashboard(data) {
         const w = width - m.left - m.right, h = height - m.top - m.bottom;
         const wrap = parent.append('div').attr('class','region-panel');
         const heading = wrap.append('div').attr('class','region-header');
+        const tooltip = wrap.append('div').attr('class', 'point-tooltip').attr('role', 'tooltip').style('display', 'none');
         heading.append('span').attr('class','region-swatch').style('background', COLORS[region]);
         heading.append('h4').text(region);
         const svg = wrap.append('svg').attr('class','plot').attr('viewBox',`0 0 ${width} ${height}`)
@@ -99,10 +98,24 @@ function buildDashboard(data) {
             focus.style('display',null);
             focus.select('line').attr('transform',`translate(${x(month)},0)`);
             focus.select('circle').attr('cx',x(month)).attr('cy',y(s));
-            d3.select('#hover-summary').text(`${region} · ${MONTHS[month-1]}: selected ${s.toFixed(1)}% · historical ${r.toFixed(1)}%`);
+            const difference = s - r;
+            const signedDifference = `${difference >= 0 ? '+' : ''}${difference.toFixed(1)} percentage points`;
+            tooltip.html(`
+            <div class="tooltip-month">${MONTHS[month - 1]} · ${region}</div>
+            <div class="tooltip-row"><span>Selected (${selection[0]}–${selection[1]})</span><strong>${s.toFixed(1)}%</strong></div>
+            <div class="tooltip-row"><span>Historical (2003–2025)</span><strong>${r.toFixed(1)}%</strong></div>
+            <div class="tooltip-change">Difference: ${signedDifference}</div>
+            `).style('display', 'block');
+
+            // Position beside the cursor while keeping the popup inside its chart.
+            const bounds = wrap.node().getBoundingClientRect();
+            const tip = tooltip.node();
+            const left = Math.min(event.clientX - bounds.left + 14, bounds.width - tip.offsetWidth - 8);
+            const top = Math.max(8, event.clientY - bounds.top - tip.offsetHeight - 12);
+            tooltip.style('left', `${Math.max(8, left)}px`).style('top', `${top}px`);
         }).on('mouseleave', () => {
-            focus.style('display','none');
-            d3.select('#hover-summary').text('Hover over a chart to compare monthly values.');
+            focus.style('display', 'none');
+            tooltip.style('display', 'none');
         });
     }
 
@@ -150,6 +163,6 @@ function buildDashboard(data) {
     }
     drawBrush();
     render();
-}
+    }
 
-start();
+    start();
