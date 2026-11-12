@@ -136,8 +136,8 @@ h1,h2,h3,p {
 }
 
 .section h2 {
-    font-size: clamp(32px,4vw,46px);
-    margin-bottom: 17px;
+    font-size: clamp(26px, 3vw, 36px);
+    margin-bottom: 28px;
 }
 
 .section p {
