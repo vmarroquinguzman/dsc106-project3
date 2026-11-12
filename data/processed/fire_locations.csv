@@ -1679,7 +1679,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 35.0153,-114.6653,2003-07-17,2003,7,Southern California,100,814.4
 34.9804,-114.6318,2003-07-17,2003,7,Southern California,96,72.6
 34.9932,-114.658,2003-07-17,2003,7,Southern California,100,149.6
-34.9958,-114.6306,2003-07-17,2003,7,Southern California,78,77.3
 33.3967,-116.5754,2003-07-17,2003,7,Southern California,100,198.7
 33.3793,-116.5728,2003-07-17,2003,7,Southern California,100,236.6
 33.3989,-116.6152,2003-07-17,2003,7,Southern California,100,1493.8
@@ -66159,7 +66158,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 36.0227,-121.5056,2008-10-17,2008,10,Central California,36,12.0
 41.909,-120.7733,2008-10-17,2008,10,Northern California,68,10.0
 41.987,-120.855,2008-10-17,2008,10,Northern California,68,9.5
-41.994,-120.839,2008-10-17,2008,10,Northern California,64,9.8
 41.9847,-120.8418,2008-10-17,2008,10,Northern California,36,4.8
 41.9066,-120.7599,2008-10-17,2008,10,Northern California,48,5.7
 39.6807,-121.0577,2008-10-17,2008,10,Northern California,77,24.3
@@ -90704,7 +90702,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 37.4107,-120.5803,2012-11-22,2012,11,Central California,40,5.6
 37.7496,-121.049,2012-11-22,2012,11,Central California,63,8.2
 37.5871,-121.13,2012-11-22,2012,11,Central California,50,4.6
-32.6526,-115.6606,2012-11-22,2012,11,Southern California,77,17.8
 37.4156,-120.6223,2012-11-24,2012,11,Central California,51,4.3
 37.4107,-120.5889,2012-11-24,2012,11,Central California,53,4.7
 35.3874,-120.0518,2012-11-24,2012,11,Southern California,63,3.9
@@ -101099,7 +101096,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 39.2656,-122.2475,2013-12-29,2013,12,Northern California,81,82.6
 33.6235,-114.5511,2013-12-30,2013,12,Southern California,73,29.7
 33.6317,-114.5469,2013-12-30,2013,12,Southern California,72,55.8
-33.6253,-114.5308,2013-12-30,2013,12,Southern California,76,33.5
 39.3584,-121.5533,2014-01-01,2014,1,Northern California,54,10.9
 39.3657,-121.5311,2014-01-01,2014,1,Northern California,22,8.5
 39.3547,-121.5348,2014-01-01,2014,1,Northern California,62,14.5
@@ -109011,7 +109007,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 39.3951,-122.0636,2014-10-27,2014,10,Northern California,82,43.1
 39.48,-122.1646,2014-10-27,2014,10,Northern California,100,271.0
 39.4757,-122.1853,2014-10-27,2014,10,Northern California,87,233.2
-41.995,-120.0418,2014-10-27,2014,10,Northern California,60,12.3
 36.7389,-119.5773,2014-10-28,2014,10,Central California,37,21.1
 37.1351,-120.1895,2014-10-28,2014,10,Central California,53,36.9
 41.9932,-120.0341,2014-10-28,2014,10,Northern California,41,38.3
@@ -146670,7 +146665,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 34.5657,-119.3821,2017-12-13,2017,12,Southern California,79,95.2
 34.4513,-119.5585,2017-12-13,2017,12,Southern California,73,34.6
 34.447,-119.5971,2017-12-13,2017,12,Southern California,81,71.0
-32.6159,-116.1383,2017-12-13,2017,12,Southern California,25,4.3
 33.5521,-116.6468,2017-12-13,2017,12,Southern California,75,14.8
 34.4465,-118.9761,2017-12-13,2017,12,Southern California,86,37.4
 34.4467,-118.968,2017-12-13,2017,12,Southern California,81,27.7
@@ -271104,7 +271098,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 33.9948,-114.4632,2022-05-27,2022,5,Southern California,100,76.9
 33.9931,-114.4835,2022-05-27,2022,5,Southern California,100,77.5
 33.9913,-114.5042,2022-05-27,2022,5,Southern California,65,25.4
-34.0068,-114.4648,2022-05-27,2022,5,Southern California,94,38.2
 34.0051,-114.4853,2022-05-27,2022,5,Southern California,61,24.1
 34.0189,-114.4664,2022-05-27,2022,5,Southern California,100,298.1
 34.0171,-114.487,2022-05-27,2022,5,Southern California,100,120.2
@@ -271147,7 +271140,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 34.0398,-114.4386,2022-05-28,2022,5,Southern California,100,249.3
 34.0374,-114.4463,2022-05-28,2022,5,Southern California,99,189.2
 34.0133,-114.4535,2022-05-28,2022,5,Southern California,64,63.6
-34.0112,-114.464,2022-05-28,2022,5,Southern California,29,42.8
 34.0394,-114.4504,2022-05-28,2022,5,Southern California,100,326.1
 34.0515,-114.4539,2022-05-28,2022,5,Southern California,100,331.4
 34.0422,-114.4559,2022-05-28,2022,5,Southern California,100,383.6
@@ -276283,7 +276275,6 @@ latitude,longitude,acq_date,year,month,region,confidence,frp
 37.3928,-120.6567,2023-02-06,2023,2,Central California,90,42.7
 37.5109,-121.2099,2023-02-06,2023,2,Central California,55,6.6
 33.8709,-114.5249,2023-02-06,2023,2,Southern California,82,82.4
-33.8571,-114.5293,2023-02-06,2023,2,Southern California,81,71.5
 38.4448,-121.5722,2023-02-07,2023,2,Central California,63,14.8
 41.5023,-124.0377,2023-02-08,2023,2,Northern California,57,19.1
 40.781,-121.3603,2023-02-08,2023,2,Northern California,63,15.5

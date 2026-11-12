@@ -19,7 +19,7 @@ year,month,region,fire_detections
 2003,6,Southern California,115
 2003,7,Central California,141
 2003,7,Northern California,137
-2003,7,Southern California,169
+2003,7,Southern California,168
 2003,8,Central California,523
 2003,8,Northern California,77
 2003,8,Southern California,86
@@ -206,7 +206,7 @@ year,month,region,fire_detections
 2008,9,Northern California,877
 2008,9,Southern California,45
 2008,10,Central California,310
-2008,10,Northern California,378
+2008,10,Northern California,377
 2008,10,Southern California,126
 2008,11,Central California,254
 2008,11,Northern California,153
@@ -354,7 +354,7 @@ year,month,region,fire_detections
 2012,10,Southern California,40
 2012,11,Central California,130
 2012,11,Northern California,147
-2012,11,Southern California,63
+2012,11,Southern California,62
 2012,12,Central California,33
 2012,12,Northern California,13
 2012,12,Southern California,21
@@ -393,7 +393,7 @@ year,month,region,fire_detections
 2013,11,Southern California,32
 2013,12,Central California,158
 2013,12,Northern California,117
-2013,12,Southern California,30
+2013,12,Southern California,29
 2014,1,Central California,143
 2014,1,Northern California,146
 2014,1,Southern California,62
@@ -422,7 +422,7 @@ year,month,region,fire_detections
 2014,9,Northern California,1597
 2014,9,Southern California,46
 2014,10,Central California,177
-2014,10,Northern California,219
+2014,10,Northern California,218
 2014,10,Southern California,34
 2014,11,Central California,99
 2014,11,Northern California,97
@@ -537,7 +537,7 @@ year,month,region,fire_detections
 2017,11,Southern California,118
 2017,12,Central California,296
 2017,12,Northern California,55
-2017,12,Southern California,2135
+2017,12,Southern California,2134
 2018,1,Central California,192
 2018,1,Northern California,8
 2018,1,Southern California,121
@@ -696,7 +696,7 @@ year,month,region,fire_detections
 2022,4,Southern California,13
 2022,5,Central California,84
 2022,5,Northern California,60
-2022,5,Southern California,117
+2022,5,Southern California,115
 2022,6,Central California,78
 2022,6,Northern California,46
 2022,6,Southern California,79
@@ -723,7 +723,7 @@ year,month,region,fire_detections
 2023,1,Southern California,30
 2023,2,Central California,168
 2023,2,Northern California,81
-2023,2,Southern California,52
+2023,2,Southern California,51
 2023,3,Central California,81
 2023,3,Northern California,24
 2023,3,Southern California,18

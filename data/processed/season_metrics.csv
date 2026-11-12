@@ -1,7 +1,7 @@
 year,region,season_start,season_end,median_day,detections,season_length
 2003,Central California,73.0,325.0,265.0,3991,252.0
 2003,Northern California,64.0,325.0,257.0,1727,261.0
-2003,Southern California,73.0,302.0,300.0,4953,229.0
+2003,Southern California,73.0,302.0,300.0,4952,229.0
 2004,Central California,74.0,328.0,249.0,2894,254.0
 2004,Northern California,74.0,324.39999999999986,228.0,1813,250.39999999999986
 2004,Southern California,22.0,335.75,159.0,1286,313.75
@@ -15,7 +15,7 @@ year,region,season_start,season_end,median_day,detections,season_length
 2007,Northern California,37.0,323.0,247.0,2932,286.0
 2007,Southern California,154.0,298.0,232.0,7268,144.0
 2008,Central California,79.05000000000001,312.0,187.0,5902,232.95
-2008,Northern California,174.0,271.0,193.0,14718,97.0
+2008,Northern California,174.0,271.0,193.0,14717,97.0
 2008,Southern California,42.0,321.0,186.0,1606,279.0
 2009,Central California,71.0,325.0,225.0,2312,254.0
 2009,Northern California,71.0,333.2999999999997,218.0,2195,262.2999999999997
@@ -28,12 +28,12 @@ year,region,season_start,season_end,median_day,detections,season_length
 2011,Southern California,27.0,319.3499999999999,204.0,854,292.3499999999999
 2012,Central California,17.0,327.0,203.0,1031,310.0
 2012,Northern California,188.45000000000005,253.0,230.0,7210,64.54999999999995
-2012,Southern California,19.0,325.0,223.0,935,306.0
+2012,Southern California,19.0,325.0,223.0,934,306.0
 2013,Central California,100.0,317.75,238.0,5726,217.75
 2013,Northern California,59.0,326.0,231.0,3280,267.0
-2013,Southern California,35.0,304.0,162.0,1268,269.0
+2013,Southern California,35.0,304.0,162.0,1267,269.0
 2014,Central California,31.0,314.0,258.0,2119,283.0
-2014,Northern California,63.0,282.0,230.0,5573,219.0
+2014,Northern California,63.0,282.0,230.0,5572,219.0
 2014,Southern California,24.0,336.39999999999986,155.0,585,312.39999999999986
 2015,Central California,88.0,321.0,237.0,5063,233.0
 2015,Northern California,93.0,315.0,226.0,5281,222.0
@@ -43,7 +43,7 @@ year,region,season_start,season_end,median_day,detections,season_length
 2016,Southern California,100.0,320.0,231.0,3170,220.0
 2017,Central California,100.0,333.0,251.0,6375,233.0
 2017,Northern California,197.05,289.0,243.0,7462,91.94999999999999
-2017,Southern California,93.0,349.0,339.0,3793,256.0
+2017,Southern California,93.0,349.0,339.0,3792,256.0
 2018,Central California,44.0,313.0,212.0,6088,269.0
 2018,Northern California,187.0,314.0,223.0,13654,127.0
 2018,Southern California,25.0,317.0,220.0,1480,292.0
@@ -58,10 +58,10 @@ year,region,season_start,season_end,median_day,detections,season_length
 2021,Southern California,36.0,287.0,260.0,2256,251.0
 2022,Central California,33.0,314.4499999999998,205.0,3092,281.4499999999998
 2022,Northern California,34.0,324.0,243.0,3133,290.0
-2022,Southern California,27.0,323.0,185.0,701,296.0
+2022,Southern California,27.0,323.0,186.0,699,296.0
 2023,Central California,44.0,338.0,268.0,2264,294.0
 2023,Northern California,104.0,333.0,241.0,4286,229.0
-2023,Southern California,44.0,332.0,211.0,881,288.0
+2023,Southern California,44.0,332.0,211.0,880,288.0
 2024,Central California,78.0,316.0,231.0,2701,238.0
 2024,Northern California,99.0,313.0,209.0,4888,214.0
 2024,Southern California,149.0,311.0,209.0,3265,162.0
