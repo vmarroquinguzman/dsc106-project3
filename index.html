@@ -19,7 +19,7 @@
     </nav>
     <header id="top" class="hero">
         <p class="eyebrow">DSC 106 · GROUP 9 · Kate Oberhauser, Vanessa Marroquin Guzman, Casee Hong</p>
-        <h1>One state.<br><em>Different fire seasons.</em></h1>
+        <h1>California's<br><em>Different fire seasons</em></h1>
         <p class="hero-description">When are satellite fire detections most concentrated in Northern, Central, and Southern California, and how does that change from year to year?</p>
         <a class="btn-primary" href="#explore">Explore the seasons ↓</a>
     </header>
@@ -39,7 +39,7 @@
                 <div class="controls"><strong id="selected-years" aria-live="polite">2003–2025</strong><button id="reset-years" type="button">Reset</button></div>
                 </div>
                 <div id="year-chart" role="group" aria-label="Brushable timeline of annual fire detections"></div>
-                <p class="hint">Tip: drag across the timeline to choose years; drag the shaded selection to move the interval.</p>
+                <p class="hint">Drag across the timeline to choose years; drag the shaded selection to move the interval.</p>
             </div>
 
             <div class="chart-card">
@@ -55,25 +55,25 @@
 
         <section id="about" class="section section-alt">
             <h2>02 / DATA DESCRIPTION & PROCESSING</h2>
-            <p>Our visualization uses NASA MODIS active-fire detection data from 2003 to 2025. Each detection represents a thermal anomaly observed by satellite, rather than an individual wildfire or a measurement of burned area.</p>
+            <p>Our visualization uses NASA MODIS active-fire detection data from 2003 to 2025. Each detection represents a thermal anomaly observed by satellite.</p>
             <p>We cleaned the dataset by removing records with missing or invalid dates and coordinates, keeping only vegetation-fire detections (type == 0), and restricting observations to 2003–2025. We initially used a geographic bounding box (32.5°N–42.0°N, 124.5°W–114.0°W), then applied California's state boundary from the U.S. Census Bureau to exclude detections outside the state. We divided California into three approximate regions based on latitude: Northern California (39°N and above), Central California (36°N–39°N), and Southern California (below 36°N).</p>
             <p>To compare seasonal patterns, we aggregated detections by region, year, and month. We then calculated each month's percentage of that region's annual detections. This normalization allows us to compare seasonal timing across years with different amounts of fire activity.</p>
-            <p>Because satellite coverage and detection conditions can affect the number of observations, these results represent patterns in satellite-detected fire activity rather than the total number of wildfires.</p>
+            <p>Because satellite coverage and detection conditions can affect the number of observations, these results represent patterns in satellite-detected fire activity, not the total number of wildfires.</p>
         </section>
 
         <section id="writeup" class="section">
             <h2>03 / DESIGN RATIONALE & DEVELOPMENT PROCESS</h2>
-            <p><strong>Visual Encodings:</strong> We chose three separate line graphs, one for each California region, to compare seasonal fire patterns without overcrowding a single chart. Month is encoded by horizontal position, while the average percentage of annual fire detections is encoded by vertical position on shared scales. This makes it easy to compare when fire activity is most concentrated throughout the year. Solid lines represent the selected years, while dashed lines provide a historical reference across 2003–2025.</p>
-            <p><strong>Interaction techniques:</strong> Inspired by our Lab 6 visualization, we incorporated an adjustable timeline and hover tooltips. The timeline uses a D3 brush to let users select different years or ranges of years, updating all three regional graphs simultaneously. This allows users to explore how seasonal patterns vary over time. The tooltips display monthly statistics directly beside the data points, making comparisons easier without cluttering the graphs.</p>
+            <p><strong>Visual Encodings/Design Decisions:</strong> We chose three separate line graphs, one for each California region, to compare seasonal fire patterns without overcrowding a single chart. Month is encoded by horizontal position, while the average percentage of annual fire detections is encoded by vertical position on common scales. This makes it easy to compare when fire activity is most concentrated throughout the year for the selected time period vs. the entire baseline 2003-2025 time period. Solid lines represent the selected years, while dashed lines provide a historical reference across 2003–2025. The solid line corresponding to each region is color coded in red, blue, and green so they can be easily distinguished. Additionally, we went with a warm orange/red color palette to match the theme of fire without being overly distracting. </p>
+            <p><strong>Interaction techniques:</strong> Inspired by our Lab 6 visualization, we incorporated hover tooltips and an adjustable timeline, a similar concept to the lab's selection rectangle. The timeline uses a D3 brush to let users select different ranges of years and updates all three regional graphs simultaneously. This allows users to explore how seasonal patterns vary over various time periods. The tooltips display monthly statistics directly beside the data points, making comparisons easier without cluttering the graphs.</p>
             <p><strong>Alternatives:</strong> We initially considered using a geographic map to display individual fire detections. However, we decided that regional line graphs would better communicate our research question, which focuses on seasonal timing rather than individual fire locations. We also considered combining all three regions into one graph, but separate panels made regional comparisons clearer.</p>
             <h3>Development process</h3>
             <p>We began by exploring the NASA MODIS datasets and considering several potential topics, including California coastal water temperature fluctuations and wildfire activity. We ultimately chose fire detections and selected 2003–2025 as our study period to examine patterns over a relatively long timeframe.</p>
             <p>Casee located the relevant dataset and submitted a request to obtain the large fire-detection archive. Meanwhile, Vanessa and Kate began exploratory analysis, examining summary statistics and creating preliminary visualizations to identify possible research questions.</p>
-            <p>Initially, we expected to find increasing fire activity across California and a fire season extending later into the fall. However, our exploratory graphs did not show a clear, consistent trend supporting these expectations. After several iterations, we began comparing Northern, Central, and Southern California and found interesting differences in their seasonal patterns.</p>
+            <p>Initially, we expected to find increasing fire activity across California and a fire season extending later into the fall. However, our exploratory graphs did not show a clear, consistent trend supporting this. After several iterations, we began comparing Northern, Central, and Southern California and found interesting differences in their seasonal patterns.</p>
             <p>This led us to our final research question: How does the seasonal distribution of satellite-detected fire activity differ between Northern, Central, and Southern California, and how do these patterns vary over time?</p>
             <p>After narrowing our focus, we began developing the interactive website. We cleaned and aggregated the original dataset, exporting smaller CSV files that could be loaded efficiently using D3. This allowed us to work with monthly regional summaries rather than the full raw dataset.</p>
-            <p>Kate developed the initial interactive visualizations, and all three members contributed to refining the design and functionality. This included improving the year-range brush, adding hover tooltips to display monthly statistics, and testing the functionality of the website.</p>
-            <p><strong>Time summary and challenges:</strong> We spent approximately 15 total people-hours on the project, including 5 hours exploring and processing the data, 5 hours developing the interactive visualization, and 5 hours testing and refining the website. The most time-consuming part was the exploratory analysis, particularly narrowing down our research question after our initial hypotheses were not supported by the data. Implementing the D3 interactions and refining the layout also required several iterations. AI tools helped us establish an initial website structure, which we then modified and improved to better communicate our findings.</p>
+            <p>Kate developed the initial interactive visualizations, and all three members contributed to refining the design and functionality. This included improving the year range brush, adding hover tooltips to display monthly statistics, and testing the functionality of the website.</p>
+            <p><strong>Time summary and challenges:</strong> We spent approximately 15 total people-hours on the project, including 5 hours exploring and processing the data, 5 hours developing the interactive visualization, and 5 hours testing and refining the website. The most time consuming part was the exploratory analysis, particularly narrowing down our research question after our initial hypotheses were not supported by the data. Implementing the D3 interactions and refining the layout also required several iterations. AI tools helped us establish an initial website structure, which we then modified and improved to better communicate our findings.</p>
         </section>
     </main>
     <footer><span>Group 9 · DSC 106 · UC San Diego</span><span>Source: NASA MODIS active-fire data · 2003–2025</span></footer>
